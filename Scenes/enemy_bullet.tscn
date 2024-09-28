@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dsjonnmdap433"]
 
-[ext_resource type="Script" path="res://Scenes/enemy_bullet.gd" id="1_6ra1n"]
+[ext_resource type="Script" path="res://Scripts/enemy_bullet.gd" id="1_6ra1n"]
 [ext_resource type="Texture2D" uid="uid://clgq2ema45x04" path="res://Assets/enemy_bullet.png" id="1_fv6qp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ajyir"]
