@@ -905,6 +905,7 @@ position = Vector2(1049, 400)
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(299, 200)
 script = ExtResource("2_odbvj")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_ene0e")
