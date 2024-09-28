@@ -911,7 +911,6 @@ sprite_frames = SubResource("SpriteFrames_ene0e")
 animation = &"death"
 frame = 15
 frame_progress = 1.0
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(0.5, 10)
