@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqnr73i2dmce7"]
 
 [ext_resource type="Texture2D" uid="uid://ccwlv3eg2m3i3" path="res://Assets/ch-botanic-panic-background.jpg" id="1_7xetx"]
-[ext_resource type="Script" path="res://Scenes/about_me.gd" id="1_nm6nn"]
+[ext_resource type="Script" path="res://Scripts/about_me.gd" id="1_nm6nn"]
 
 [node name="AboutMe" type="Control"]
 layout_mode = 3
