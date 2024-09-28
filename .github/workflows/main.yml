@@ -26,10 +26,5 @@ jobs:
           use_preset_export_path: ./
           archive_output: true
           wine_path: ${{ steps.wine_install.outputs.WINE_PATH }}
-      - name: create release
-        uses: ncipollo/release-action@v1.11.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          generateReleaseNotes: true
-          tag: ${{ github.ref_name }}
-          artifacts: ${{ steps.export.outputs.archive_directory }}/* # Added "/*" at the end is glob pattern match for this action
+      env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
