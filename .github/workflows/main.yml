@@ -26,5 +26,5 @@ jobs:
           use_preset_export_path: ./
           archive_output: true
           wine_path: ${{ steps.wine_install.outputs.WINE_PATH }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
