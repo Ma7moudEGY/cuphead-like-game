@@ -1,0 +1,221 @@
+[gd_scene load_steps=23 format=3 uid="uid://dflcfqyiowv1m"]
+
+[ext_resource type="Script" path="res://Scenes/bullet.gd" id="1_xsgu0"]
+[ext_resource type="Texture2D" uid="uid://bilslnxol5aqc" path="res://Assets/bullet.png" id="2_uxjfc"]
+[ext_resource type="Texture2D" uid="uid://bn7w6mclrf3cu" path="res://Assets/BulletDeath/0.png" id="3_mwmdy"]
+[ext_resource type="Texture2D" uid="uid://b6oty4bscnybx" path="res://Assets/BulletDeath/1.png" id="4_ydpgt"]
+[ext_resource type="Texture2D" uid="uid://50oqoag36yil" path="res://Assets/BulletDeath/2.png" id="5_4asnu"]
+[ext_resource type="Texture2D" uid="uid://7hc018qa7sks" path="res://Assets/BulletDeath/3.png" id="6_mp5xl"]
+[ext_resource type="Texture2D" uid="uid://bts6xo3ysmek7" path="res://Assets/BulletDeath/4.png" id="7_dkafn"]
+[ext_resource type="Texture2D" uid="uid://dm5n76xa7il6i" path="res://Assets/BulletDeath/5.png" id="8_41qlt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2aew"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(0, 0, 54, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nisyo"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(59, 0, 75, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3rhc"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(139, 0, 157, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvv6g"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(301, 0, 148, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xl5wr"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(454, 0, 144, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wdpt"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(603, 0, 159, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ltbq"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(767, 0, 136, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8el7"]
+atlas = ExtResource("2_uxjfc")
+region = Rect2(908, 0, 122, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xf3tv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2aew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nisyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3rhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvv6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xl5wr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wdpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ltbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h8el7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mwmdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ydpgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4asnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_mp5xl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dkafn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_41qlt")
+}],
+"loop": false,
+"name": &"fade",
+"speed": 16.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d3lk"]
+size = Vector2(32, 14)
+
+[sub_resource type="Animation" id="Animation_y3ff3"]
+resource_name = "Bullet"
+length = 1.00001
+loop_mode = 1
+step = 0.0625
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(3, 2), Vector2(30, 2), Vector2(28, 6), Vector2(28, 3), Vector2(30, 5), Vector2(18, 2), Vector2(19, 1), Vector2(0, 0), Vector2(3, 2), Vector2(30, 2), Vector2(28, 6), Vector2(28, 3), Vector2(30, 5), Vector2(18, 2), Vector2(19, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1, 1), Vector2(1.5, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(2, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(1.9, 1), Vector2(1, 1), Vector2(1.5, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(2, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(1.9, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bhfi3"]
+length = 1.00001
+step = 0.0625
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(3, 2), Vector2(30, 2), Vector2(28, 6), Vector2(28, 3), Vector2(30, 5), Vector2(18, 2), Vector2(19, 1), Vector2(0, 0), Vector2(3, 2), Vector2(30, 2), Vector2(28, 6), Vector2(28, 3), Vector2(30, 5), Vector2(18, 2), Vector2(19, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0625, 0.125, 0.1875, 0.25, 0.3125, 0.375, 0.4375, 0.5, 0.5625, 0.625, 0.6875, 0.75, 0.8125, 0.875, 0.9375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1, 1), Vector2(1.5, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(2, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(1.9, 1), Vector2(1, 1), Vector2(1.5, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(2, 1), Vector2(2.3, 1), Vector2(2.2, 1), Vector2(1.9, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ly7eq"]
+resource_name = "new_animation"
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0), Vector2(1, 2), Vector2(30, 3), Vector2(28, 6), Vector2(28, 3), Vector2(31, 6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.7, 1), Vector2(2.4, 1), Vector2(2.25, 1), Vector2(1.9, 1), Vector2(2.25, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kt5oo"]
+_data = {
+"Bullet": SubResource("Animation_y3ff3"),
+"RESET": SubResource("Animation_bhfi3"),
+"new_animation": SubResource("Animation_ly7eq")
+}
+
+[node name="bullet" type="Area2D"]
+script = ExtResource("1_xsgu0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xf3tv")
+animation = &"fade"
+autoplay = "default"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3d3lk")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1, 7.15256e-07)
+scale = Vector2(1.5, 0.7)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CollisionShape2D")
+libraries = {
+"": SubResource("AnimationLibrary_kt5oo")
+}
+autoplay = "Bullet"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

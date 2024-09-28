@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqnr73i2dmce7"]
+
+[ext_resource type="Texture2D" uid="uid://ccwlv3eg2m3i3" path="res://Assets/ch-botanic-panic-background.jpg" id="1_7xetx"]
+[ext_resource type="Script" path="res://Scenes/about_me.gd" id="1_nm6nn"]
+
+[node name="AboutMe" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm6nn")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+layout_mode = 0
+offset_right = 1288.0
+offset_bottom = 716.0
+texture = ExtResource("1_7xetx")
+
+[node name="AboutMe" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.5
+offset_top = -111.0
+offset_right = 196.5
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 30
+text = "Hello, my name is Mahmoud FathAllah. I made this Cuphead-like-game
+so I can try and learn game development in Godot. I don't own any of
+the art used in this demo. Thank you for playing.
+
+*There isn't an animation for shooting diagonally down while walking"
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = 215.0
+offset_right = 613.0
+offset_bottom = 294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Start" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Back"
+
+[connection signal="pressed" from="Container/Start" to="." method="_on_start_pressed"]

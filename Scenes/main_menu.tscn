@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://k5ayqqofprfm"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_uplnl"]
+[ext_resource type="Texture2D" uid="uid://ccwlv3eg2m3i3" path="res://Assets/ch-botanic-panic-background.jpg" id="2_7t65x"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uplnl")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.481789, 0.481789, 0.481789, 1)
+layout_mode = 0
+offset_right = 1288.0
+offset_bottom = 716.0
+texture = ExtResource("2_7t65x")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -67.0
+offset_right = 221.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+metadata/_edit_group_ = true
+
+[node name="Start" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Start Game"
+
+[node name="About" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "About"
+
+[node name="Exit" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[connection signal="pressed" from="Container/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Container/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Container/Exit" to="." method="_on_exit_pressed"]
